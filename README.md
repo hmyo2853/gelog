@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Stack List
 
-## Getting Started
+### husky (git hooks)
 
-First, run the development server:
+- 컨벤션에 맞춰 커밋 메세지 정형화
+- 나중에 커밋 확인하기 쉬워짐
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### eslint
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 기본적인 js의 오류를 잡아줘 휴먼미스테이크의 빈도를 낮춰준다
+- 정형화된 코드 스타일 적용
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### lint-staged
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- vsc에서 스테이징된 파일들에 eslint와 prettier로 더블 체크
 
-## Learn More
+### pnpm
 
-To learn more about Next.js, take a look at the following resources:
+- 공유 패키지를 사용하여 디스크 저장용량을 줄이고 빠르게 설치
+- 패키지를 직접 복사하지 않고 Hard Link라는 것을 사용하여 파일의 링크를 node_modules에 추가 (저장용량 DOWN)
+- 모노레포 사용에 좋다 (모노레포로 사용해볼까.....)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### nextjs
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- SEO에 최적화 (블로그에 굳)
+- CSR과는 반대로 SSR은 갱신이 잦지 않는 리스트형 사이트에 최적 (블로그에 굳)
+- 강력한 라우팅 기능 (e.g. 다이나믹 라우팅)
